@@ -2,7 +2,7 @@ language: none
 services:
  # - cassandra 
   - elasticsearch 
-  #- memcached 
+  - memcached 
   #- mongodb 
   #- mysql 
   #- neo4j 
@@ -24,3 +24,7 @@ build:
     image_name: drydock/u14all
     image_tag: master
     pull: true  
+    
+  cache: true 
+  cache_dir_list: 
+    - $SHIPPABLE_BUILD_DIR/shippable.yml
