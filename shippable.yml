@@ -17,13 +17,17 @@ services:
  
 
 build:
+
+  pre_ci:
+    - docker build -t=shippabledocker/shiphitchcock1_sample_node .
+
   ci:
     - node --version
     
-  pre_ci_boot:
-    image_name: drydock/u14all
-    image_tag: master
-    pull: true  
+  #pre_ci_boot:
+   # image_name: drydock/u14all
+   # image_tag: master
+   # pull: true  
     
   cache: true 
   cache_dir_list: 
