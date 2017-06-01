@@ -9,7 +9,7 @@ services:
   - postgres 
   - rabbitmq 
   - redis 
-  - selenium
+  - selenium 
   - sqllite 
   - couchdb 
   - rethinkdb 
