@@ -1,19 +1,19 @@
 language: none
 services:
-  - cassandra 
- # - elasticsearch 
-  - memcached 
-  - mongodb 
-  - mysql 
- # - neo4j 
- # - postgres 
-  - rabbitmq 
-  - redis 
-  - selenium 
-  - sqlite 
- # - couchdb 
- # - rethinkdb 
- # - riak  
+  #- cassandra 
+  - elasticsearch 
+  #- memcached 
+  #- mongodb 
+  #- mysql 
+  - neo4j 
+  - postgres 
+ # - rabbitmq 
+  #- redis 
+  #- selenium 
+  #- sqlite 
+  - couchdb 
+  - rethinkdb 
+  - riak  
 
 build:
   ci:
@@ -27,5 +27,4 @@ build:
   cache: true 
   cache_dir_list: 
     - $SHIPPABLE_BUILD_DIR/shippable.yml
-
-
+    
