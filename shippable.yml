@@ -1,7 +1,7 @@
 language: none
 services:
   #- cassandra 
- ## - elasticsearch 
+  - elasticsearch 
   #- memcached 
   #- mongodb 
   #- mysql 
@@ -11,7 +11,7 @@ services:
   #- redis 
   #- selenium 
   #- sqlite 
-  - couchdb 
+##  - couchdb 
  ## - rethinkdb 
  ## - riak  
 
