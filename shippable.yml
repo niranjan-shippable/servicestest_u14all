@@ -35,7 +35,7 @@ build:
     - cassandra -v
     #- elasticsearch -v
     - memcached -V
-    - mongod -v
+    #- mongod -v
     - psql --version
     - redis-server -v
     - riak version
