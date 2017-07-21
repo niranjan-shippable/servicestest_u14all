@@ -30,9 +30,16 @@ build:
     - echo SHIPPABLE_RABBITMQ_BINARY=$SHIPPABLE_RABBITMQ_BINARY
     - echo SHIPPABLE_REDIS_BINARY=$SHIPPABLE_REDIS_BINARY
     - echo SHIPPABLE_RETHINKDB_BINARY=$SHIPPABLE_RETHINKDB_BINARY
-    - echo SHIPPABLE_RIAK_BINARY=$SHIPPABLE_RIAK_BINARY
     - echo SHIPPABLE_SELENIUM_v=$SHIPPABLE_SELENIUM_BINARY
     
+    - cassandra -v
+    - elasticsearch -v
+    - memcached -V
+    - mongod -v
+    - psql --version
+    - redis-server -v
+    - riak version
+        
   pre_ci_boot:
     image_name: drydock/u14all
     image_tag: master
