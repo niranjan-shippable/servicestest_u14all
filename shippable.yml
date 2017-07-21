@@ -33,7 +33,7 @@ build:
     - echo SHIPPABLE_SELENIUM_v=$SHIPPABLE_SELENIUM_BINARY
     
     - cassandra -v
-    - elasticsearch -v
+    #- elasticsearch -v
     - memcached -V
     - mongod -v
     - psql --version
