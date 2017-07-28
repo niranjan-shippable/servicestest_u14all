@@ -2,8 +2,8 @@ language: none
 
 services:
   - cassandra
-  - couchdb
-  - elasticsearch 
+ # - couchdb
+ # - elasticsearch 
   - memcached 
   - mongodb 
   - mysql 
