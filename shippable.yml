@@ -1,20 +1,20 @@
 language: none
 
 services:
-  - cassandra
- # - couchdb
- # - elasticsearch 
-  - memcached 
-  - mongodb 
-  - mysql 
-  - neo4j 
-  - postgres 
-  - rabbitmq 
-  - redis 
-  - rethinkdb
-  - riak
-  - selenium
-  - sqlite 
+ # - cassandra
+  - couchdb
+  - elasticsearch 
+#  - memcached 
+#  - mongodb 
+#  - mysql 
+#  - neo4j 
+#  - postgres 
+#  - rabbitmq 
+#  - redis 
+#  - rethinkdb
+#  - riak
+#  - selenium
+#  - sqlite 
 
 build:
   ci:
@@ -40,7 +40,7 @@ build:
     - redis-server -v
     - riak version
     
-    - ./serviceversion.sh
+    #- ./serviceversion.sh
         
   pre_ci_boot:
     image_name: drydock/u14all
