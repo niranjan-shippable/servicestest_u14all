@@ -1,20 +1,20 @@
 language: none
 
 services:
- # - cassandra
+  - cassandra
   - couchdb
   - elasticsearch 
-#  - memcached 
-#  - mongodb 
-#  - mysql 
-#  - neo4j 
-#  - postgres 
-#  - rabbitmq 
-#  - redis 
-#  - rethinkdb
-#  - riak
-#  - selenium
-#  - sqlite 
+  - memcached 
+  - mongodb 
+  - mysql 
+  - neo4j 
+  - postgres 
+  - rabbitmq 
+  - redis 
+  - rethinkdb
+  - riak
+  - selenium
+  - sqlite 
 
 build:
   ci:
