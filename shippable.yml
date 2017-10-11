@@ -9,7 +9,9 @@ build:
 
 integrations:
   notifications:
-    - integrationName: email-niranjan-shippable
+    - integrationName: asdfa
+      recipients:
+        - niranjan8192@gmail.com      
       type: email
       on_success: always
       on_failure: always
