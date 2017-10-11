@@ -45,4 +45,11 @@ build:
   pre_ci_boot:
     image_name: drydock/u14all
     image_tag: master
-    pull: true    
+    pull: true  
+
+integrations:
+  notifications:
+    - integrationName: email-niranjan-shippable
+      type: email
+      recipients:
+        - niranjan8192@gmail.com
