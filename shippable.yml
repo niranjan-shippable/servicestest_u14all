@@ -9,9 +9,7 @@ build:
 
 integrations:
   notifications:
-    - integrationName: email-niranjan-shippable
-      recipients:
-        - niranjan8192@gmail.com      
+    - integrationName: email-niranjan-shippable  
       type: email
       on_success: always
       on_failure: always
