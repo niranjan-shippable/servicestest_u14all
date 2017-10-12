@@ -7,7 +7,7 @@ build:
 
 integrations:
   notifications:
-    - integrationName: email-niranjan-shippable  
+    - integrationName: email  
       type: email
       on_success: always
       on_failure: always
