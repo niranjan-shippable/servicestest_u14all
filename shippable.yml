@@ -7,7 +7,9 @@ build:
 
 integrations:
   notifications:
-    - integrationName: email  
+    - integrationName: email
+      recipients:
+        - "niranjan@shippable.com"
       type: email
       on_success: always
       on_failure: always
