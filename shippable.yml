@@ -1,8 +1,5 @@
 language: none
 
-services:
-  - sqlite 
-
 build:
   ci:
     - node --version
