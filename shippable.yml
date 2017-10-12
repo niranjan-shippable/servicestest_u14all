@@ -4,8 +4,7 @@ build:
   ci:
     - node --version
     - sleep 5
-    - echo "fail on purpose"
-    - exit 1
+    - echo "PR to succeed"
 
 integrations:
   notifications:
