@@ -4,6 +4,8 @@ build:
   ci:
     - node --version
     - sleep 5
+    - echo "fail on purpose"
+    - exit 1
 
 integrations:
   notifications:
