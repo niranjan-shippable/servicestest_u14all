@@ -1,19 +1,64 @@
-language: none
+
+language: node_js
+
+services:
+  - cassandra
+  - couchdb
+  - elasticsearch 
+  - memcached 
+  - mongodb 
+  - mysql 
+  - neo4j 
+  - postgres 
+  - rabbitmq 
+  - redis 
+  - rethinkdb
+  - riak
+  - selenium
+  - sqlite 
 
 build:
   ci:
-    - node --version
-    - sleep 5
-    - echo "PR to succeed"
+    - node --version    
+    - echo SHIPPABLE_CASSANDRA_BINARY=$SHIPPABLE_CASSANDRA_BINARY
+    - echo SHIPPABLE_COUCHDB_BINARY=$SHIPPABLE_COUCHDB_BINARY
+    - echo SHIPPABLE_ES_BINARY=$SHIPPABLE_ES_BINARY
+    - echo SHIPPABLE_MEMCACHED_BINARY=$SHIPPABLE_MEMCACHED_BINARY
+    - echo SHIPPABLE_MONGODB_BINARY=$SHIPPABLE_MONGODB_BINARY
+    - echo SHIPPABLE_MYSQL_BINARY=$SHIPPABLE_MYSQL_BINARY
+    - echo SHIPPABLE_NEO4J_BINARY=$SHIPPABLE_NEO4J_BINARY
+    - echo SHIPPABLE_POSTGRES_BINARY=$SHIPPABLE_POSTGRES_BINARY
+    - echo SHIPPABLE_RABBITMQ_BINARY=$SHIPPABLE_RABBITMQ_BINARY
+    - echo SHIPPABLE_REDIS_BINARY=$SHIPPABLE_REDIS_BINARY
+    - echo SHIPPABLE_RETHINKDB_BINARY=$SHIPPABLE_RETHINKDB_BINARY
+    - echo SHIPPABLE_SELENIUM_v=$SHIPPABLE_SELENIUM_BINARY    
+    - echo SHIPPABLE_SQLITE_BINARY=$SHIPPABLE_SQLITE_BINARY
 
-integrations:
-  notifications:
-    - integrationName: email
-      recipients:
-        - "niranjan@shippable.com"
-      type: email
-      on_success: always
-      on_failure: always
-      on_start: always
-      on_pull_request: always
-      on_cancel: always
+    - cassandra -v
+    #- elasticsearch -v
+    - memcached -V
+    #- mongod -v
+    - psql --version 
+    - redis-server -v
+    - riak version
+    - rethinkdb -v || true
+    # couchdb version
+    - curl http://localhost:5984
+    - $SHIPPABLE_NEO4J_BINARY version || true
+    - $SHIPPABLE_MONGODB_BINARY || true
+    - which mysql
+    - $SHIPPABLE_MYSQL_BINARY --version || true
+    - $SHIPPABLE_SQLITE_BINARY -version || true
+    - mysql -V || true
+    - sqlite3 -version || true
+    - rabbitmqctl status || true
+    # elastic search version
+    - curl -XGET 'localhost:9200'
+    
+    
+    #- ./serviceversion.sh
+        
+  pre_ci_boot:
+    image_name: drydock/u14all
+    image_tag: master
+    pull: true
